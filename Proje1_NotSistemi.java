@@ -1,3 +1,11 @@
+/**
+* Ad Soyad: Melike Gücin
+* Numara: 240541081
+* Proje: Not Sistemi
+* Tarih: 25.11.2025
+*/
+
+
 import java.util.Scanner;
 
 public class NotSistemi {
@@ -66,4 +74,5 @@ public class NotSistemi {
            return "YOK";
     }
 }
+
 
