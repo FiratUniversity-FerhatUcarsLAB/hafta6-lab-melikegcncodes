@@ -8,7 +8,7 @@
 
 import java.util.Scanner;
 
-public class NotSistemi {
+public class Proje1_NotSistemi {
     public static void main(String[] args) {
         Scanner puan = new Scanner(System.in);
 
@@ -74,5 +74,6 @@ public class NotSistemi {
            return "YOK";
     }
 }
+
 
 
