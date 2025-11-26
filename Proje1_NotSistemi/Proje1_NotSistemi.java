@@ -27,23 +27,19 @@ public class Proje1_NotSistemi {
         System.out.println("Ortalama: " + calculateAverage(vize, finalNotu, odev));
 
         System.out.println("Harf Notu: " + getLetterGrade(ortalama));
-        System.out.println("Durum: " + isPassingGrade(ortalama));
-        System.out.println("Onur Listesi: " + isHonorList(ortalama, vize, finalNotu, odev));
-        System.out.println("Bütünleme Hakkı: " + hasRetakeRight(ortalama));
+        System.out.println("Durum: " + (isPassingGrade(ortalama) ? "GEÇTİ" : "KALDI"));
+        System.out.println("Onur Listesi: " + (isHonorList(ortalama, vize, finalNotu, odev) ? "EVET" : "HAYIR"));
+        System.out.println("Bütünleme Hakkı: " + (hasRetakeRight(ortalama) ? "VAR" : "YOK"));
     }
         public static double calculateAverage(double vize, double finalNotu, double odev) {
             double Ortalama = vize * 0.3 + finalNotu * 0.4 + odev* 0.3;
             return Ortalama;
 
 }
-
-
-
-
-    public static String isPassingGrade(double ortalama) {
-        if (ortalama >= 50) return "Geçti";
+    public static boolean isPassingGrade(double ortalama) {
+        if (ortalama >= 50) return true;
         else
-            return "Kaldı";
+            return false;
     }
 
     public static char getLetterGrade(double ortalama) {
@@ -68,16 +64,16 @@ public class Proje1_NotSistemi {
         // Onur Listesii
     }
 
-    public static String isHonorList(double ortalama, double vize, double finalNotu,  double odev) {
-        if (ortalama >= 85 && vize >=70 && finalNotu >= 70 && odev >= 70) return "EVET";
+    public static boolean isHonorList(double ortalama, double vize, double finalNotu,  double odev) {
+        if (ortalama >= 85 && vize >=70 && finalNotu >= 70 && odev >= 70) return true;
         else
-           return "HAYIR";
+           return false;
     }
 
-    public static String hasRetakeRight(double ortalama) {
-        if (ortalama >= 40 && ortalama < 50) return "VAR";
+    public static boolean hasRetakeRight(double ortalama) {
+        if (ortalama >= 40 && ortalama < 50) return true;
         else
-           return "YOK";
+           return false;
     }
 }
 
