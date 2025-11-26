@@ -24,14 +24,14 @@ public class Proje1_NotSistemi {
         System.out.println("------------------------------");
 
         double ortalama = (vize * 0.30) + (finalNotu * 0.40) + (odev * 0.30);
-        System.out.println("Ortalama: " + calculateAvarage(vize, finalNotu, odev));
+        System.out.println("Ortalama: " + calculateAverage(vize, finalNotu, odev));
 
         System.out.println("Harf Notu: " + getLetterGrade(ortalama));
         System.out.println("Durum: " + isPassingGrade(ortalama));
         System.out.println("Onur Listesi: " + isHonorList(ortalama, vize, finalNotu, odev));
         System.out.println("Bütünleme Hakkı: " + hasRetakeRight(ortalama));
     }
-        public static double calculateAvarage(double vize, double finalNotu, double odev) {
+        public static double calculateAverage(double vize, double finalNotu, double odev) {
             double Ortalama = vize * 0.3 + finalNotu * 0.4 + odev* 0.3;
             return Ortalama;
 
