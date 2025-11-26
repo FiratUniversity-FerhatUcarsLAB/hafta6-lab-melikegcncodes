@@ -1,10 +1,9 @@
-/**
-* Ad Soyad: Melike Gücin
-* Numara: 240541081
-* Proje: Not Sistemi
-* Tarih: 25.11.2025
-*/
-
+/*
+ * Ad Soyad: Melike Gücin
+ * Öğrenci No: 240541081
+ * Proje: Akıllı Restoran Sipariş Sistemi
+ * Tarih: 25.11.2025
+ */
 
 import java.util.Scanner;
 
@@ -25,13 +24,21 @@ public class Proje1_NotSistemi {
         System.out.println("------------------------------");
 
         double ortalama = (vize * 0.30) + (finalNotu * 0.40) + (odev * 0.30);
-        System.out.println("Ortalama: " + ortalama);
+        System.out.println("Ortalama: " + calculateAvarage(vize, finalNotu, odev));
 
         System.out.println("Harf Notu: " + getLetterGrade(ortalama));
         System.out.println("Durum: " + isPassingGrade(ortalama));
         System.out.println("Onur Listesi: " + isHonorList(ortalama, vize, finalNotu, odev));
         System.out.println("Bütünleme Hakkı: " + hasRetakeRight(ortalama));
     }
+        public static double calculateAvarage(double vize, double finalNotu, double odev) {
+            double Ortalama = vize * 0.3 + finalNotu * 0.4 + odev* 0.3;
+            return Ortalama;
+
+}
+
+
+
 
     public static String isPassingGrade(double ortalama) {
         if (ortalama >= 50) return "Geçti";
@@ -39,8 +46,7 @@ public class Proje1_NotSistemi {
             return "Kaldı";
     }
 
-    public static String getLetterGrade(double ortalama) {
-        if (ortalama < 0) return "Kaldı";
+    public static char getLetterGrade(double ortalama) {
         if (ortalama > 100) ortalama = 100;
 
         int not = (int) ortalama / 10;
@@ -48,15 +54,15 @@ public class Proje1_NotSistemi {
             switch (not) {
                 case 10: //100
                 case 9:
-                    return "A";
+                    return 'A';
                 case 8:
-                    return "B";
+                    return 'B';
                 case 7:
-                    return "C";
+                    return 'C';
                 case 6:
-                    return "D";
+                    return 'D';
                 default:
-                    return "F";
+                    return 'F';
             }
         }
         // Onur Listesii
@@ -74,6 +80,4 @@ public class Proje1_NotSistemi {
            return "YOK";
     }
 }
-
-
 
